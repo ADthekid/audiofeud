@@ -12,6 +12,9 @@ function Email() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        console.log(process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'))
+        console.log(process.env.GOOGLE_CLIENT_EMAIL)
+        console.log(process.env.GOOGLE_SHEET_ID)
         e.preventDefault()
         console.log(JSON.stringify(data))
         const { email } = data
