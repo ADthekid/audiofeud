@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         console.log(auth)
         const sheet = google.sheets("v4")
         await sheet.spreadsheets.values.append({
-          spreadsheetId: '1BpCgjlkgo_hqWAscC9dnEqqb4MUzxaok_NMo2Md2kbI',
+          spreadsheetId: process.env.GOOGLE_SHEET_ID,
           auth: auth,
           range: "Sheet1",
           valueInputOption: "USER_ENTERED",
