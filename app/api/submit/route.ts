@@ -17,6 +17,7 @@ export async function POST(request: Request) {
           key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
           scopes: ["https://www.googleapis.com/auth/spreadsheets"]
         })
+        console.log(process.env.GOOGLE_SHEET_ID)
         console.log(auth)
         const sheet = google.sheets("v4")
         await sheet.spreadsheets.values.append({
