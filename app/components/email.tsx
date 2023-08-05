@@ -17,7 +17,7 @@ function Email() {
         const { email } = data
 
         // Send data to API route 
-        const res = await fetch('http://localhost:3000/api/submit', {
+        const res = await fetch('http://audiofeud.com/api/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
