@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     ;(async () => {
         const auth = new google.auth.JWT({
           email: 'database@audiofeud.iam.gserviceaccount.com',
-          key: process.env.GOOGLE_PRIVATE_KEY?.split(String.raw`\n`).join('\n'),
+          key: process.env.GOOGLE_PRIVATE_KEY,
           scopes: ["https://www.googleapis.com/auth/spreadsheets"]
         })
         const sheet = google.sheets("v4")
