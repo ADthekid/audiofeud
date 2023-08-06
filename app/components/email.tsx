@@ -1,6 +1,9 @@
 'use client'
 import React, { FormEvent, useState, ChangeEvent } from 'react';
 import { Montserrat } from 'next/font/google'
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from '../firebase';
+
 const initState = {
     email: "",
 }
@@ -16,22 +19,13 @@ function Email() {
         console.log(JSON.stringify(data))
         const { email } = data
 
-        // Send data to API route 
-        const res = await fetch('/api/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email
-            })
-        })
+        await addDoc(collection(db, 'emails'), {
+            email: email, 
+          });
+
 
         setData({email: ""});
         setIsSubmitted(true);
-
-        const result = await res.json()
-        console.log(result)
     }
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

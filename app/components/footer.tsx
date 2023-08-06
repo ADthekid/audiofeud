@@ -10,7 +10,7 @@ function Footer() {
         <div className="overflow-x-hidden">
             <footer className="bg-indigo-600 text-center lg:text-left">
                 <div className="p-4 text-center text-white font-light text-break">
-                    Made with love by the Audiofeud team. All children must be on-leash at all times.
+                    Made with &#128156; by the Audiofeud team. All children must be on-leash at all times.
                 </div>
             </footer>
         </div>
