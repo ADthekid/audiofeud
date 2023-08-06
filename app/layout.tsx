@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="h-screen" lang="en">
+    <html lang="en">
       <body className={hankenGrotesk.className}>
         <section className="text-white h-screen bg-gradient-to-b from-indigo-600 via-violet-500 to-white flex justify-center items-center">
           <ul className='text-center flex flex-col justify-center items-center'>
@@ -109,7 +109,7 @@ export default function RootLayout({
               </ul>
             </div>
           </ul>
-          <div className="absolute bottom-0 left-0 w-screen">
+          <div className="fixed bottom-0 left-0 w-screen">
             <Footer />
           </div>
         </section>
