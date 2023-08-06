@@ -2,4 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+section .content{
+    z-index: 1;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    height:50vh;
+    background-image: linear-gradient(#4f46e5 75%, #8b5cf6 82.5%,white 100%);
+    border-radius:50%;
+    transform-origin: bottom;
+    overflow: hidden;
+    transform: translateX(-50%) translateY(-20%) scale(4);
+}
+
+@media (min-width: 768px) {
+    section::before{
+        width: 70vw;
+        transform: translateX(-50%) translateY(-15%) scale(4);
+    }
+}
 

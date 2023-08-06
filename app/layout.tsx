@@ -13,7 +13,7 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: '800' })
 
 export const metadata = {
   title: 'Audiofeud | The sound of the bay',
-  description: 'We\'re an overnight music hackathon for high schoolers and college students. Stay in the loop for the chance to win cash and studio equipment.',
+  description: 'We\'re going to bring Bay Area high school and college students with an interest in creating music under one roof for 24 hours. The best results will win cash and studio engineering equipment. Are you in?',
 }
 
 export default function RootLayout({
@@ -24,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={hankenGrotesk.className}>
-        <section className="text-white h-screen bg-gradient-to-b from-indigo-600 via-violet-500 to-white flex justify-center items-center">
+        <div className="relative overflow-hidden">
+        <section className="text-white h-screen bg-indigo-600 to-white flex justify-center items-center">
+          <div className="content">
           <ul className='text-center flex flex-col justify-center items-center'>
             <div className="absolute top-14 w-screen">
               <div className="justify-center items-center flex relative md:h-16 h-12 opacity-100 hover:opacity-80">
@@ -89,19 +91,19 @@ export default function RootLayout({
             <div className={montserrat.className}>
               <ul className="h-auto items-center flex-row justify-center flex">
                 <li>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20">24</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">24</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">hours</p>
                   </div>
                 </li>
                 <li className='border-r-4 border-l-4 border-white'>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20">$10k+</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">$10k+</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">in prizes</p>
                   </div>
                 </li>
                 <li>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20">&infin;</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">&infin;</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">vibes</p>
                   </div>
@@ -109,10 +111,12 @@ export default function RootLayout({
               </ul>
             </div>
           </ul>
-          <div className="fixed bottom-0 left-0 w-screen">
-            <Footer />
+          <div className="absolute bottom-0 left-0 w-screen">
+            <p className="p-4 text-center text-white font-light">Made with &#128156; by the Audiofeud team. Keep children on leash at all times.</p>
+          </div>
           </div>
         </section>
+        </div>
       </body>
     </html>
   )
