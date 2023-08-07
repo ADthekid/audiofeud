@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={hankenGrotesk.className}>
         <div className="relative overflow-hidden">
-        <section className="min-h-[844px] h-screen text-white bg-indigo-600 to-white flex justify-center items-center">
+        <section className="min-h-[844px] h-screen text-white bg-audiofeudpurple-500 to-white flex justify-center items-center">
           <div className="content">
           <ul className='text-center flex flex-col justify-center items-center'>
             <div className="absolute top-14 w-screen">

@@ -14,6 +14,12 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      colors: {
+        audiofeudpurple: {
+          500: '#6633ff',
+          900: '#4824b3'
+        },
+      },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',

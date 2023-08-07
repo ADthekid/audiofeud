@@ -58,7 +58,7 @@ function Email() {
                         onChange={handleChange}
                         readOnly={isSubmitted}
                     />
-                    <button className="disabled:opacity-50 bg-indigo-600 text-lg md:text-2xl font-normal text-white font-bold p-3 md:p-5 rounded-r-full" disabled={isSubmitted} type="submit">Oh yeah.</button>
+                    <button className="disabled:opacity-50 bg-audiofeudpurple-900 text-lg md:text-2xl font-normal text-white font-bold p-3 md:p-5 rounded-r-full" disabled={isSubmitted} type="submit">Oh yeah.</button>
                 </div>
             </form>
         </div>
