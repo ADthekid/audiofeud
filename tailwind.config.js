@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -8,6 +9,10 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'xs': '430px',
+      ...defaultTheme.screens,
+    },
     extend: {
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',

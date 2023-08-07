@@ -13,7 +13,7 @@ section::before{
     left: 50%;
     width: 100vw;
     height:50vh;
-    background-image: linear-gradient(#4f46e5 75%, #8b5cf6 82.5%,white 100%);
+    background-image: linear-gradient(#6633ff 75%, white 100%);
     border-radius:50%;
     transform-origin: bottom;
     overflow: hidden;
@@ -27,3 +27,27 @@ section::before{
     }
 }
 
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.5rem; 
+    position: relative;
+  }
+
+.underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 8px;
+    background-color: #FFFFFF;
+    transition: width 0.25s ease-out;
+  }
+
+.underline-hover-effect:hover::before {
+    width: 100%;
+  }
+
+.emojis{
+    white-space: nowrap;
+}

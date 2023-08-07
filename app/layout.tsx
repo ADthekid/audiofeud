@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={hankenGrotesk.className}>
         <div className="relative overflow-hidden">
-        <section className="text-white h-screen bg-indigo-600 to-white flex justify-center items-center">
+        <section className="min-h-[844px] h-screen text-white bg-indigo-600 to-white flex justify-center items-center">
           <div className="content">
           <ul className='text-center flex flex-col justify-center items-center'>
             <div className="absolute top-14 w-screen">
@@ -84,26 +84,29 @@ export default function RootLayout({
                 </li>
               </ul>
             </div>
-            <h1 className="m-auto font-waterfall font-normal text-2xl sm:text-3xl md:text-4xl text-white font-bold md:mt-10">
+            <h1 className="hidden xs:flex m-auto font-waterfall font-normal text-2xl sm:text-3xl md:text-4xl text-white font-bold md:mt-10">
               An all-nighter with a bunch of musicians.
+            </h1>
+            <h1 className="xs:hidden flex m-auto font-waterfall font-normal text-2xl sm:text-3xl md:text-4xl text-white font-bold md:mt-10">
+              An all-nighter with <br /> a bunch of musicians.
             </h1>
             <Email />
             <div className={montserrat.className}>
               <ul className="h-auto items-center flex-row justify-center flex">
                 <li>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">24</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_5px_0_#6633ff]">24</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">hours</p>
                   </div>
                 </li>
                 <li className='border-r-4 border-l-4 border-white'>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">$10k+</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_5px_0_#6633ff]">$10k+</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">in prizes</p>
                   </div>
                 </li>
                 <li>
-                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_3px_0_#6633ff]">&infin;</h1>
+                  <h1 className="pb-2 text-3xl md:text-6xl text-white py-2 px-8 md:px-20 hover:text-shadow-[0_5px_0_#6633ff]">&infin;</h1>
                   <div className={hankenGrotesk.className}>
                     <p className="font-light text-2xl">vibes</p>
                   </div>
@@ -112,7 +115,8 @@ export default function RootLayout({
             </div>
           </ul>
           <div className="absolute bottom-0 left-0 w-screen">
-            <p className="p-4 text-center text-white font-light">Made with &#128156; by the Audiofeud team. Keep children on leash at all times.</p>
+            <p className="md:block hidden p-4 text-center text-white font-light">Made with &#128156; by the Audiofeud team. Keep children on leash at all times.</p>
+            <p className="md:hidden p-4 text-center text-white font-light">Made with &#128156; by the Audiofeud team. <br /> Keep children on leash at all times.</p>
           </div>
           </div>
         </section>

@@ -42,7 +42,8 @@ function Email() {
         <div>
             <form onSubmit={handleSubmit} className="flex flex-col mx-auto">
                 <div className={montserrat.className}>
-                    <label className="text-7xl sm:text-7xl md:text-8xl font-bold text-shadow-[0_9px_0_#6633ff]" htmlFor="email">TUNE IN! &#127911;&#129304;&#128266;</label>
+                    <label className="underline-hover-effect text-7xl sm:text-7xl md:text-8xl font-bold text-shadow-[0_9px_0_#4824b3]" htmlFor="email">TUNE IN!</label>
+                    <label className="emojis text-7xl sm:text-7xl md:text-8xl font-bold text-shadow-[0_9px_0_#4824b3]"> &#127911;&#129304;&#128266;</label>
                 </div>
                 <div className="w-full">
                     <input
